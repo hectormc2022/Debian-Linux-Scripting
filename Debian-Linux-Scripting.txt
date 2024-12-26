@@ -147,10 +147,10 @@ fi
 
 && AND ||
 •	&& = AND
-mkdir /tmp/bak && cp test.txt /tmp/bak/
+  mkdir /tmp/bak && cp test.txt /tmp/bak/
 
 •	|| = OR
-cp test.txt /tmp/bak/ || cp test.txt /tmp
+  cp test.txt /tmp/bak/ || cp test.txt /tmp
 
 #!/bin/bash
 HOST="google.com"
