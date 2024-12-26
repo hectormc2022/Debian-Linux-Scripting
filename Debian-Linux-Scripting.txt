@@ -220,6 +220,7 @@ function hello() {
 function now() {
     echo "It's $(date +%r)"
 }
+
 ::: hello
 
 ----------- [ Positional Parameters ] ------------
@@ -248,8 +249,6 @@ function hello() {
 
 ::: hello Jason Dan Ryan
 
-
-
 ----------- [ Variable Scope ] ----------
 
 •	By default, variables are global
@@ -272,6 +271,7 @@ echo $GLOBAL_VAR
 
 
 ----------- [ Local Variable ] ----------
+
 •	Can only be accessed wihin the function
 •	Create using the local keyword
 •	local LOCAL_VAR=1
@@ -279,13 +279,14 @@ echo $GLOBAL_VAR
 •	Best practice to keep variables local in functions
 
 
+
 -------------- [ Exit Status ] -----------
+
 •	Functions have an exit status
 •	Explicitly
 • return <RETURN_CODE>	
 •	Implicity
 •	The exit status of the last command executed in the function
-
 
 •	Valid exit codes range from 0 to 255
 •	0 = success
@@ -307,8 +308,8 @@ then
     echo "Backup succeeded!"
 fi
 
-
 ---------------- [ Summary ] --------------
+
 •	DRY - Do not Repeat Yourself
 •	Global and local variables
 •	Parameters
