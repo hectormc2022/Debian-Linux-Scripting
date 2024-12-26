@@ -220,7 +220,7 @@ function hello() {
 function now() {
     echo "It's $(date +%r)"
 }
-hello
+::: hello
 
 ----------- [ Positional Parameters ] ------------
 
@@ -235,7 +235,8 @@ hello
 function hello() {
         echo "Hello $1"
 }
-hello Jason
+
+::: hello Jason
 
 #!/bin/bash
 function hello() {
@@ -244,9 +245,13 @@ function hello() {
                 echo "Hello $NAME"
         done
 }
-hello Jason Dan Ryan
+
+::: hello Jason Dan Ryan
+
+
 
 ----------- [ Variable Scope ] ----------
+
 •	By default, variables are global
 •	Variables have to be defined before used.
 
@@ -265,19 +270,21 @@ my_function
 #GLOBAL_VAR is now available.
 echo $GLOBAL_VAR
 
+
 ----------- [ Local Variable ] ----------
 •	Can only be accessed wihin the function
 •	Create using the local keyword
-  •	local LOCAL_VAR=1
+•	local LOCAL_VAR=1
 •	Only functions can have local variables
 •	Best practice to keep variables local in functions
+
 
 -------------- [ Exit Status ] -----------
 •	Functions have an exit status
 •	Explicitly
-  • return <RETURN_CODE>	
+• return <RETURN_CODE>	
 •	Implicity
-  •	The exit status of the last command executed in the function
+•	The exit status of the last command executed in the function
 
 
 •	Valid exit codes range from 0 to 255
